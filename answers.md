@@ -22,7 +22,7 @@ Place all written answers from `assignment-01.md` here for easier grading.
   True, see answer above.
 
   - 1e
-  False, $\sqrt{n} grows faster than any polylog.
+  False, $\sqrt{n}$ grows faster than any polylog.
 
   - 1f
   True, see answer above.
