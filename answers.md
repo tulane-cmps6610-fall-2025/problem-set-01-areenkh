@@ -9,6 +9,9 @@ Place all written answers from `assignment-01.md` here for easier grading.
 
 1. **Asymptotic notation**
 
+  - 1a
+  True, because \(2^{\,n+1} = 2\cdot 2^n\), \(2^{\,n+1}\in O(2^n))
+
   - 1b    
  
   - 1c
