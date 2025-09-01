@@ -19,21 +19,19 @@ Place all written answers from `assignment-01.md` here for easier grading.
   False, because positive powers of n dominate logarithms.
 
   - 1d
-  True, see above.
+  True, see answer above.
 
   - 1e
   False, $\sqrt{n} grows faster than any polylog.
 
   - 1f
-  True, see above.
+  True, see answer above.
 
   - 1g
-Let's assume, by contradiction that $f \in o(g(n))&$ and $f \in \omega(g)$.
-For every $\varepsilon>0$ there exists $N_1$ such that $|f(n)| \le \varepsilon\, |g(n)|$ for all $n \ge N_1$.
-
-And for every $M>0$ there exists $N_2$ such that $|f(n)| \ge M\, |g(n)|$ for all $n \ge N_2$
-
-Take $\varepsilon=\tfrac{1}{3}$ and $M\\tfrac{1}{2}$, then for $n \ge N=\max\{N_1, N_2\}$ we must have both $|f(n)| \le \tfrac{1}{3}|g(n)|$ and $|f(n) \ge \tfrac{1}{2}|g(n)|$, a contradiction. therefore, $o(g(n))\cap \omega(g(n))=\varnothing$
+  Let's assume, by contradiction that $f \in o(g(n))&$ and $f \in \omega(g)$.
+  For every $\varepsilon>0$ there exists $N_1$ such that $|f(n)| \le \varepsilon\, |g(n)|$ for all $n \ge N_1$.
+  And for every $M>0$ there exists $N_2$ such that $|f(n)| \ge M\, |g(n)|$ for all $n \ge N_2$
+  Take $\varepsilon=\tfrac{1}{3}$ and $M\\tfrac{1}{2}$, then for $n \ge N=\max\{N_1, N_2\}$ we must have both $|f(n)| \le \tfrac{1}{3}|g(n)|$ and $|f(n) \ge \tfrac{1}{2}|g(n)|$, a contradiction. therefore, $o(g(n))\cap \omega(g(n))=\varnothing$
 
 2. **SPARC to Python**
 
