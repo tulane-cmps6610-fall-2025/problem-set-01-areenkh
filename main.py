@@ -15,8 +15,17 @@ def foo(a, b):
         return foo(y,y%x)
 
 def longest_run(mylist, key):
-    ### TODO
-    pass
+    count=0
+    max=0
+    for i in range (len(mylist)):
+        if mylist[i]==key:
+            count=count+1
+            if count>max:
+                max=count
+        else:
+            count=0
+    return max
+
 
 
 class Result:
@@ -37,10 +46,27 @@ class Result:
     
 def longest_run_recursive(mylist, key):
     ### TODO
-    pass
+    def longest(low, high):
+        if low>= high:
+            return Result(0,0,0,True)
+        if high-low ==1:
+            if mylist[low]==key:
+                return Result(1,1,1, True)
+            else:
+                return Result(0,0,0, False)
+        mid=(low+high)//2
+        left = longest(low,mid)
+        right = longest(mid, high)
+        if left.is_entire_range and right.is_entire_range:
+            return Result(high-low,high-low, high-low, True )
+        l_size=left.left_size if not left.is_entire_range else (left.left_size+right.left_size)
+        r_size=right.right_size if not right.is_entire_range else (left.right_size+right.right_size)
+        size = max(left.longest_size, right.longest_size,left.right_size+right.left_size )
+        return Result(l_size, r_size, size, False)
+    return longest(0, len(mylist)).longest_size
+        
 
 ## Feel free to add your own tests here.
 def test_longest_run():
     assert longest_run([2,12,12,8,12,12,12,0,12,1], 12) == 3
-
 

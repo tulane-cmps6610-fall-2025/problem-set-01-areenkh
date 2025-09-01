@@ -1,8 +1,8 @@
   # CMPS 6610 Problem Set 01
 ## Answers
 
-**Name:**_________________________
-**Name:**_________________________
+**Name:** Areen Khalaila
+**Name:** akhalaila@tulane.edu
 
 
 Place all written answers from `assignment-01.md` here for easier grading.
@@ -27,14 +27,19 @@ Place all written answers from `assignment-01.md` here for easier grading.
   This function computes the greatest common divisor of its two arguments. 
 
   - 2c
-  Work is Θ(log min(a,b)) and Span is Θ(log min(a,b)). Each recursive step does O(1) work and strictly reduces the smaller argument. The worse case follow the Fibonacci bound giving Θ(log min(a, b)) steps. Because there's only one recursive call per step, span equals the number of steps. 
+  Work is O(log min(a,b)) and Span is Θ(log min(a,b)). Each recursive step does O(1) work and strictly reduces the smaller argument. The worse case follow the Fibonacci bound giving O(log min(a, b)) steps. Because there's only one recursive call per step, span equals the number of steps. 
 
 3. **Parallelism and recursion**
 
   - 3b
+  Each iteration does O(1) work and the loop is inherently sequential, and it's not parallel, therefore, the work and span are both O(n).
 
   - 3d
+  Work: 2W(n/2)+c --> O(n)
+  Span: 2S(n/2)+c --> O(n)
 
   - 3e
+  Work: is still O(n)
+  Span: O(log n)
   
 4. **GCD**
